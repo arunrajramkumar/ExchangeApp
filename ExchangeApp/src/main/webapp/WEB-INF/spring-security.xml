@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+                        http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <global-method-security pre-post-annotations="enabled" />  
+    
+    <http pattern="/rest/login" security="none"/>   
+    <http pattern="/rest/signup" security="none"/>
+
+    <http  pattern="/rest/**" entry-point-ref="restAuthenticationEntryPoint" create-session="stateless"> 
+         
+        <custom-filter before="FORM_LOGIN_FILTER" ref="appAuthenticationFilter"/>
+        
+    </http>
+    
+    <authentication-manager alias="authenticationManager">
+            <ldap-authentication-provider
+                user-search-base="ou=serviceAccounts,dc=capella,dc=edu"
+                user-search-filter="(uid={0})"
+               
+                >
+            </ldap-authentication-provider>
+    </authentication-manager>
+    
+    <!-- <ldap-server root="dc=baeldung,dc=com" ldif="users.ldif"/> -->
+   <!-- <ldap-server url="ldap://www.zflexldap.com:389" root="cn=ro_admin,ou=sysadmins,dc=zflexsoftware,dc=com"/> -->
+
+  <ldap-server url="ldaps://devldap3.capella.edu:636" manager-dn="uid=TomcatReadAdmin,ou=ouAdmins,dc=capella,dc=edu"
+  manager-password="wIaH3IYw"/>
+  
+   <!--  <authentication-manager alias="authenticationManager">
+        <authentication-provider ref="appAuthenticationProvider" /> 
+    </authentication-manager> -->
+    
+    <beans:bean id="appAuthenticationProvider"
+		class="com.test.common.security.AppAuthenticationProvider">
+		
+	</beans:bean>
+	
+	<beans:bean id="appAuthenticationSuccessHandler"
+		class="com.test.common.security.AppAuthenticationSuccessHandler">
+		
+	</beans:bean>
+	
+	<beans:bean id="restAuthenticationEntryPoint"
+		class="com.test.common.security.RestAuthenticationEntryPoint">
+		
+	
+		
+	</beans:bean>
+	<beans:bean id="appLdapAuthProvider"
+		class="com.test.common.security.AppLdapAuthProvider">		
+		
+	</beans:bean>
+	
+	 <beans:bean id="appAuthenticationFilter" class="com.test.common.security.AppAuthenticationFilter">  
+        <beans:property name="authenticationManager" ref="authenticationManager" />
+        <beans:property name="authenticationSuccessHandler" ref="appAuthenticationSuccessHandler" />  
+    </beans:bean>
+    
+    </beans:beans>
