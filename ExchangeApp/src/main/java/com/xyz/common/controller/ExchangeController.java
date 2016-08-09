@@ -1,4 +1,4 @@
-package com.test.common.controller;
+package com.xyz.common.controller;
 
 import java.util.ArrayList;
 
