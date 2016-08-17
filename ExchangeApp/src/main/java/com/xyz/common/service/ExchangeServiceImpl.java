@@ -1,4 +1,4 @@
-package com.test.common.service;
+package com.xyz.common.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.test.common.dao.ExchangeDao;
-import com.test.common.model.CurrencyExchangeRate;
+import com.xyz.common.dao.ExchangeDao;
+import com.xyz.common.model.CurrencyExchangeRate;
 
 @Service
 public class ExchangeServiceImpl implements ExchangeService{

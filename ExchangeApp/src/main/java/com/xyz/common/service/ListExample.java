@@ -1,4 +1,4 @@
-package com.test.common.service;
+package com.xyz.common.service;
 
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;

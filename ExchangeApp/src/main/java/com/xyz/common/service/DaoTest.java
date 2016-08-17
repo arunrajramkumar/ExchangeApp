@@ -1,4 +1,4 @@
-package com.test.common.service;
+package com.xyz.common.service;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
-import com.test.common.dao.EmployeeDAO;
+import com.xyz.common.dao.EmployeeDAO;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

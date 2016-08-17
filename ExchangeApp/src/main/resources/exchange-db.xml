@@ -21,7 +21,7 @@
 
     
     
-    <context:component-scan base-package="com.test.common" />
+    <context:component-scan base-package="com.xyz.common" />
 
 	
     
@@ -37,7 +37,7 @@
  <property name="dataSource" ref="dataSource"></property>
  <property name="annotatedClasses">
   <list>
-   <value>com.test.common.model.Employee</value>
+   <value>com.xyz.common.model.Employee</value>
   </list>
  </property>
  <property name="hibernateProperties">
@@ -53,7 +53,7 @@
  <property name="sessionFactory" ref="sessionFactory"></property>
   </bean>
   
-  <bean id="employeeDao" class="com.test.common.dao.EmployeeDAOImpl">
+  <bean id="employeeDao" class="com.xyz.common.dao.EmployeeDAOImpl">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     <tx:annotation-driven/>

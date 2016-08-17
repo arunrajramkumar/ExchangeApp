@@ -1,4 +1,4 @@
-package com.test.common.model;
+package com.xyz.common.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.test.common.dao;
+package com.xyz.common.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.test.common.model.Employee;
+import com.xyz.common.model.Employee;
 
  
 

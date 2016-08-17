@@ -1,4 +1,4 @@
-package com.test.common.dao;
+package com.xyz.common.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-import com.test.common.model.CurrencyExchangeRate;
+import com.xyz.common.model.CurrencyExchangeRate;
 
 @Repository
 public class ExchangeDaoImpl implements ExchangeDao{

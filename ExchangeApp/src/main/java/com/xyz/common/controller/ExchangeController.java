@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.test.common.model.CurrencyExchangeRate;
-import com.test.common.service.ExchangeService;
+import com.xyz.common.model.CurrencyExchangeRate;
+import com.xyz.common.service.ExchangeService;
 
 @RestController
 @RequestMapping("/exchange")

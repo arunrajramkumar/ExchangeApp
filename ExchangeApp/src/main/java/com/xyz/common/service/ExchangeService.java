@@ -1,8 +1,8 @@
-package com.test.common.service;
+package com.xyz.common.service;
 
 import java.util.List;
 
-import com.test.common.model.CurrencyExchangeRate;
+import com.xyz.common.model.CurrencyExchangeRate;
 
 
 

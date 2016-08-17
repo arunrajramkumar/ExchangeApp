@@ -1,8 +1,8 @@
-package com.test.common.dao;
+package com.xyz.common.dao;
 
 import java.util.List;
 
-import com.test.common.model.Employee;
+import com.xyz.common.model.Employee;
 
 public interface EmployeeDAO {
 

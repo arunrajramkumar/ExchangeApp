@@ -1,4 +1,4 @@
-package com.test.common.security;
+package com.xyz.common.security;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
